@@ -6,19 +6,19 @@
     padding: 20px;
     background-color: #f0f0f0;
   }
+
+   /* Estilo para la imagen */
+   .header-image {
+    border-radius: 50%;
+    border: none;
+    max-height: 100px;
+  }
   
   /* Estilo para la columna izquierda */
   .tableleft {
     width: 30%;
     padding: 10px;
   }
-  
-  /* Estilo para la imagen */
-  .header-image {
-    border-radius: 50%;
-    max-height: 100px;
-  }
-  
   /* Estilo para la columna derecha */
   .tableright {
     width: 30%;
