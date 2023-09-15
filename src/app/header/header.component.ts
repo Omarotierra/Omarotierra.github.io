@@ -23,6 +23,14 @@ redsocial : string = "fake name";
     this.headerService.getHeader().subscribe((data: any) => {
       console.log(data);
       alert(data);
+      this.nombre = data.name;
+      this.titulo=data.tittle;
+      this.objetivo=data.obje;
+      this.foto=data.foto;
+      this.email=data.email;
+      this.ubicacion=data.location,
+      this.celular=data.cel;
+      this.redsocial=data.social.face;
     }
     );
   }
