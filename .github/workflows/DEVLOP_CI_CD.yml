@@ -1,9 +1,9 @@
 name: develop CI, CD workflows.
 on: 
   push:
-    branches: [ "release"]
+    branches: [ "develop"]
   pull_request:
-    branches: [ "release"]
+    branches: [ "develop"]
 jobs:
   release_ci_cd:
     runs-on: ubuntu-latest
