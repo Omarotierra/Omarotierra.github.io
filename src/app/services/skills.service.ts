@@ -8,7 +8,7 @@ import { retry, catchError } from 'rxjs/operators';
 })
 export class SkillsService {
 
-  apiURL = 'http://localhost:8080/skills';
+  apiURL = 'https://nodeapi-service-omarotierra.cloud.okteto.net/skills';
 
   constructor(private http: HttpClient) { }
 
