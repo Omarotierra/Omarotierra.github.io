@@ -8,7 +8,7 @@ import { retry, catchError } from 'rxjs/operators';
 })
 export class AchievementsService {
 
-  apiURL = 'http://localhost:8080/achievements';
+  apiURL = 'https://nodeapi-service-omarotierra.cloud.okteto.net/achievements';
 
   constructor(private http: HttpClient) { }
 
