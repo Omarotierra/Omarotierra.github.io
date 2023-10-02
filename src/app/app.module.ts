@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SkillsComponent } from './skills/skills.component';
 import { AchievementsComponent } from './achievements/achievements.component';
+import { InterestComponent } from './interest/interest.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { AchievementsComponent } from './achievements/achievements.component';
     HeaderComponent,
     WorkExperienceComponent,
     SkillsComponent,
-    AchievementsComponent
+    AchievementsComponent,
+    InterestComponent
   ],
   imports: [
     BrowserModule,
