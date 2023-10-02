@@ -10,7 +10,7 @@ import { BehaviorSubject } from 'rxjs';
 export class HeaderService {
 
 
-  apiURL = 'http://localhost:8080/header';
+  apiURL = 'https://nodeapi-service-omarotierra.cloud.okteto.net/header';
   constructor(private http: HttpClient) { }
 
   httpOptions = {
