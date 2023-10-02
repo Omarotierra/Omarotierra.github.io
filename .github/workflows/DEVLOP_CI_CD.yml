@@ -5,28 +5,6 @@ on:
   pull_request:
     branches: [ "develop"]
 jobs:
-  develop-ci-cd:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16.x
-
-      - name: CI
-        run: npm ci
-      - name: Test
-        run: |
-          npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
-
-          name: develop_ci_cd
-on: 
-  push:
-    branches: [ "develop"]
-  pull_request:
-    branches: [ "develop"]
-jobs:
   release_ci_cd:
     runs-on: ubuntu-latest
     steps:
@@ -80,7 +58,7 @@ jobs:
         run: sed -i 's/{github.sha}/${{github.sha}}/g' manifest/k8s.yaml
 
       - name: ls -la 
-        run: cat manifest/k8s.yaml
+        run: cat k8s.yaml
       - uses: okteto/context@2.7.0
         with:
           token: ${{secrets.OKTETO_TOKEN }}
@@ -91,5 +69,5 @@ jobs:
           KUBECONFIG: ${{ steps.namespace.outputs.kubeconfig }}
         with:
           namespace: ${{secrets.OKTETO_NAMESPACE }}
-          manifest: manifest/k8s.yaml
+          manifest: k8s.yaml
           tag: ${{ secrets.DOCKER_USERNAME }}/${{secrets.MODEL_NAME}}:${{github.sha}}
